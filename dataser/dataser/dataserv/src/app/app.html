@@ -1,0 +1,29 @@
+<h2 style="text-align:center; margin-top: 20px; color: #1e3a8a;">
+  User Data from Server
+</h2>
+
+<table
+  style="
+    margin: 20px auto;
+    border: 1px solid black;
+    border-collapse: collapse;
+   
+  "
+>
+  <thead style="background-color: #f2f2f2;">
+    <tr>
+      <th style="border: 1px solid black; padding: 10px;">Name</th>
+      <th style="border: 1px solid black; padding: 10px;">Id</th>
+      <th style="border: 1px solid black; padding: 10px;">Email</th>
+      <th style="border: 1px solid black; padding: 10px;">Street</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let user of userList">
+      <td style="border: 1px solid black; padding: 10px;">{{ user.name }}</td>
+      <td style="border: 1px solid black; padding: 10px;">{{ user.id }}</td>
+      <td style="border: 1px solid black; padding: 10px;">{{ user.email }}</td>
+      <td style="border: 1px solid black; padding: 10px;">{{ user.address.street }}</td>
+    </tr>
+  </tbody>
+</table>
